@@ -11,7 +11,7 @@ class TopicForm(forms.ModelForm):
         labels = {'text': ''}
 
 
-class EntryForm(form.ModelForm):
+class EntryForm(forms.ModelForm):
     """Simple form for adding an entry."""
     class Meta:
         model = Entry
