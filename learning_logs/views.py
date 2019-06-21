@@ -84,6 +84,9 @@ def edit_entry(request, entry_id):
     """Edit an existing entry."""
     entry = Entry.objects.get(id=entry_id)
     topic = entry.topic
+    # Protect a user's entries from unauthorized access.
+    if topic.owner != request.user:
+        raise Http404
 
     if request.method != 'POST':
         # Initial request; pre-fill form with the current entry. (GET)
