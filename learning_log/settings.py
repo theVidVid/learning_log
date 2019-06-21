@@ -124,4 +124,5 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 # My settings
+LOGIN_URL = '/users/login/'
 LOGOUT_REDIRECT_URL = '/'
