@@ -13,9 +13,10 @@
 
   {% for entry in entries %}
     <div class="card mb-3">
-      <h3 class="card-header bg-secondary">
+      <h3 class="card-header bg-info">
         {{ entry.date_added|date:'M d, Y H:i' }}
-        <small><a href="{% url 'learning_logs:edit_entry' entry.id %}">
+        <small><a href="{% url 'learning_logs:edit_entry' entry.id %}"
+                  class="text-warning">
           Edit entry
         </a></small>
       </h3>

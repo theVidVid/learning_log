@@ -27,6 +27,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'learning-log-0001.herokuapp.com',
+    '127.0.0.1',
 ]
 
 
