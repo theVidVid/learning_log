@@ -130,3 +130,8 @@ STATIC_URL = '/static/'
 # My settings
 LOGIN_URL = '/users/login/'
 LOGOUT_REDIRECT_URL = '/'
+
+# Heroku settings
+cwd = os.getcwd()
+if cwd == '/app' or cwd[:4] == '/tmp':
+    import dj_database_url
