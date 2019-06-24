@@ -26,7 +26,7 @@ SECRET_KEY = '_n$ssvdpg42ouk%ye!wlnefnhwngd_5eux@t17vzd7t=+7s#l*'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'learning-log-0001.herokuapp.com',
+    'guarded-bayou-71920.herokuapp.com',
     '127.0.0.1',
 ]
 
