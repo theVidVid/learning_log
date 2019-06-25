@@ -26,7 +26,6 @@ SECRET_KEY = '_n$ssvdpg42ouk%ye!wlnefnhwngd_5eux@t17vzd7t=+7s#l*'
 DEBUG = True
 
 ALLOWED_HOSTS = [
-    'guarded-bayou-71920.herokuapp.com',
     '127.0.0.1',
 ]
 
@@ -100,16 +99,20 @@ DATABASES = {
 
 AUTH_PASSWORD_VALIDATORS = [
     {
-        'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'UserAttributeSimilarityValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.MinimumLengthValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'MinimumLengthValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.CommonPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'CommonPasswordValidator',
     },
     {
-        'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
+        'NAME': 'django.contrib.auth.password_validation.'
+                'NumericPasswordValidator',
     },
 ]
 
@@ -145,11 +148,3 @@ LOGIN_URL = '/users/login/'
 LOGOUT_REDIRECT_URL = '/'
 
 # Heroku settings
-cwd = os.getcwd()
-if cwd == '/app' or cwd[:4] == '/tmp':
-    import dj_database_url
-
-if os.environ.get('DEBUG') == 'TRUE':
-    DEBUG = True
-elif os.environ.get('DEBUG') == 'FALSE':
-    DEBUG = False

@@ -2,12 +2,12 @@
 {% load bootstrap4 %}
 
 {% block page_header %}
-  <h2>Add a new topic</h2>
+  <h1 class="shadow p-3 mb-3 bg-white rounded text-center">Add a new topic</h1>
 {% endblock page_header %}
 
 {% block content %}
 
-  <h5>Topic:</h5>
+  <h3 class="mb-3 mt-3">Topic:</h3>
   <form action="{% url 'learning_logs:new_topic' %}" method="post">
     {% csrf_token %}
     {% bootstrap_form form %}

@@ -2,18 +2,20 @@
 {% load bootstrap4 %}
 
 {% block page_header %}
-  <h2>Sign up for Learning Log</h2>
+  <h1 class="shadow p-3 mb-3 bg-white rounded text-center">Sign up for Learning Log</h1>
 {% endblock page_header %}
 
 {% block content %}
+  <div class="row justify-content-center align-items-center">
+    <form method="post" action="{% url 'users:register' %}">
+      {% csrf_token %}
+      {% bootstrap_form form %}
+      {% buttons %}
+        <button name="submit" class="btn btn-primary">Register</button>
+      {% endbuttons %}
+      <input type="hidden" name="next" value="{% url 'learning_logs:topics' %}" />
+    </form>
+  </div>
 
-  <form method="post" action="{% url 'users:register' %}">
-    {% csrf_token %}
-    {% bootstrap_form form %}
-    {% buttons %}
-      <button name="submit" class="btn btn-primary">Register</button>
-    {% endbuttons %}
-    <input type="hidden" name="next" value="{% url 'learning_logs:topics' %}" />
-  </form>
 
 {% endblock content %}
