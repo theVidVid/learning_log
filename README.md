@@ -10,4 +10,4 @@ The app has an admin-panel powered by Django, where the created superuser can ad
 The app was styled using Bootstrap4. 
 
 # Index page
-![Alt text](~/Pictures/index_page.png)
+
