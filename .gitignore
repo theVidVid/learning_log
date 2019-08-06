@@ -104,5 +104,5 @@ venv.bak/
 .mypy_cache/
 
 # Pycharm IDE settings
-.idea/workspace.xml
 .idea
+ll_env/include/
